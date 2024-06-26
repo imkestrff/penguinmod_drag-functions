@@ -27,7 +27,7 @@
 		}//end get info  
 //call block definitions below
 		DSEcho(args){
-			report args.DSIN;
+			return args.DSIN;
 		};
 	}//end class extension
 	Scratch.extensions.register(new Extension());
