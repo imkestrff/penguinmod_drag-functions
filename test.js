@@ -1,9 +1,13 @@
-(function(Scratch) {'use strict';
+(function(Scratch) {
+	'use strict';
 	class Extension {
 		getInfo() {
 			return {
 				id: "DSFI",
 				name: "Drag Functions",
+				color1: "#42FF88",
+				color2: "#21BA63",
+				color3: "#166342",
 				blocks: [
 					{
 					//test log block
@@ -16,17 +20,18 @@
 					opcode: 'testReporter',
 					text: 'testing!',
 					blockType: Scratch.BlockType.REPORTER,
-					disableMonitor: true,
+					disableMonitor: false,
 					allowDropAnywhere: true
 					}
 				],
 			};//end return
 		}//end get info  
-			logToConsole() {
-    		console.log('Hello world!');
-		}
 	}//end class extension
-	testLogToConsole(){console.log('log!')};
-	testReporter(){return 'report!'};
+	testLogToConsole(){
+		console.log('log!')
+	};
+	testReporter(){
+		return 'report!'
+	};
 	Scratch.extensions.register(new Extension());
 })(Scratch);
