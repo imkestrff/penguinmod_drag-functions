@@ -11,22 +11,23 @@
 				//define blocks below
 				blocks: [
 					{
-          //test report input
+      					//test report input
 					opcode: 'DSEcho',
 					text: 'echo [DSIN]',
 					blockType: Scratch.BlockType.REPORTER,
-          arguments: {
-            DSIN: {
-              Scratch.BlockShape.SQUARE
-            } 
-          }
-        }
+         				arguments: {
+            					DSIN: {
+							type: Scratch.ArgumentType.STRING, 
+							defaultValue: 'message'
+						} 
+          				}
+        			}
 				]
 			};//end return
 		}//end get info  
 //call block definitions below
-		DSEcho(){
-			report 'DSIN';
+		DSEcho(args){
+			report args.DSIN;
 		};
 	}//end class extension
 	Scratch.extensions.register(new Extension());
